@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f9d8a">
+<title>Money Manage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast"></div>
+
+<section id="auth" class="auth">
+  <div class="card auth-card">
+    <div class="logo">💰</div>
+    <h1>Money Manage</h1>
+    <p class="muted" id="authSub">Login to track your money</p>
+    <input id="aName" placeholder="Your name" style="display:none">
+    <input id="aEmail" type="email" placeholder="Email address">
+    <input id="aPass" type="password" placeholder="Password">
+    <button class="btn" id="authBtn">Login</button>
+    <p class="muted"><a href="#" id="authSwitch">New here? Create account</a></p>
+    <button class="ghost" onclick="toggleTheme()">🌓 Theme</button>
+  </div>
+</section>
+
+<div id="app" style="display:none">
+  <aside class="nav">
+    <div class="brand">💰 <span>Money Manage</span></div>
+    <button data-v="dash" class="active"><i>🏠</i><span>Home</span></button>
+    <button data-v="add"><i>➕</i><span>Add</span></button>
+    <button data-v="month"><i>📅</i><span>Monthly</span></button>
+    <button data-v="year"><i>📈</i><span>Yearly</span></button>
+    <button data-v="calc"><i>🧮</i><span>Calc</span></button>
+  </aside>
+  <main>
+    <header class="top">
+      <h2 id="title">Home</h2>
+      <div>
+        <button class="icon" onclick="toggleTheme()" title="Theme">🌓</button>
+        <button class="icon" onclick="logout()" title="Logout">🚪</button>
+      </div>
+    </header>
+    <div id="view"></div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
